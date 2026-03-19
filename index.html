@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Documento - Fattore di Rischio</title>
+    <style>
+        /* STILE GENERALE */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        .formula {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+        p { color: #555; max-width: 500px; margin: 10px auto; }
+        /* BOTTONE DOWNLOAD */
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 25px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .btn:hover { background-color: #0056b3; }
+        /* QR CODE */
+        .qr { margin-top: 30px; }
+        .qr img {
+            max-width: 180px;
+            margin-top: 15px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888;
+        }
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 { font-size: 22px; }
+            .btn { width: 100%; }
+            p { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Guida al Calcolo del Fattore di Rischio</h1>
+    <p class="formula">Formula: R = P × D</p>
+    <p>
+        In questa pagina puoi scaricare la guida al calcolo del fattore di rischio.<br><br>
+        Il documento spiega come applicare la formula R = P × D, con la matrice di
+        rischio e alcuni esempi pratici per contesti lavorativi diversi.
+    </p>
+    <a href="documento.pdf" class="btn" download>Scarica il PDF</a>
+    <div class="qr">
+        <p>Oppure inquadra il QR code per aprire il documento da smartphone:</p>
+        <img src="qr.png" alt="QR Code">
+    </div>
+    <p class="footer">Project Work – Informatica L-31</p>
+</div>
+</body>
+</html>
