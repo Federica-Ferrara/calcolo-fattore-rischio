@@ -3,79 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Documento - Fattore di Rischio</title>
+    <title>Guida al Calcolo del Fattore di Rischio</title>
+
     <style>
+
+        /* Azzeramento margini e padding di default del browser */
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        /* STILE GENERALE */
+
+        /* Stile generale della pagina */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
-            margin: 0;
             text-align: center;
+            margin: 0;
         }
+
+        /* Contenitore principale: card bianca centrata */
         .container {
-            padding: 40px 20px;
-            max-width: 600px;
-            margin: 40px auto;
-            background: white;
+            max-width: 620px;
+            margin: 50px auto;
+            padding: 40px 30px;
+            background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        h1 { color: #333; }
+
+        /* Titolo principale */
+        h1 {
+            font-size: 26px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        /* Sottotitolo con la formula */
         .formula {
+            font-size: 16px;
             font-weight: bold;
-            margin-top: 10px;
-            color: #333;
+            color: #007BFF;
+            margin: 10px 0 20px;
         }
-        p { color: #555; max-width: 500px; margin: 10px auto; }
-        /* BOTTONE DOWNLOAD */
+
+        /* Testo descrittivo */
+        .descrizione {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            max-width: 480px;
+            margin: 0 auto 30px;
+        }
+
+        /* Linea separatrice */
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 0 0 30px;
+        }
+
+        /* Sezione del bottone di download */
+        .download-section {
+            margin-bottom: 35px;
+        }
+
+        /* Testo sopra il bottone */
+        .download-section p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        /* Bottone di download */
         .btn {
             display: inline-block;
-            margin-top: 25px;
-            padding: 15px 25px;
+            padding: 14px 30px;
             background-color: #007BFF;
             color: white;
             text-decoration: none;
             border-radius: 8px;
+            font-size: 15px;
             font-weight: bold;
         }
-        .btn:hover { background-color: #0056b3; }
-        /* QR CODE */
-        .qr { margin-top: 30px; }
-        .qr img {
-            max-width: 180px;
-            margin-top: 15px;
+
+        /* Effetto hover sul bottone */
+        .btn:hover {
+            background-color: #0056b3;
         }
+
+        /* Sezione del QR code */
+        .qr-section {
+            margin-bottom: 30px;
+        }
+
+        /* Testo sopra il QR code */
+        .qr-section p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        /* Immagine del QR code */
+        .qr-section img {
+            width: 160px;
+            height: 160px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 6px;
+        }
+
+        /* Sezione informazioni aggiuntive */
+        .info {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        /* Titolo della sezione info */
+        .info h2 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        /* Elenco contenuti del documento */
+        .info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            font-size: 13px;
+            color: #555;
+            padding: 3px 0;
+        }
+
+        /* Simbolo prima di ogni voce della lista */
+        .info ul li::before {
+            content: "→ ";
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* Footer in fondo alla pagina */
         .footer {
-            margin-top: 30px;
             font-size: 12px;
-            color: #888;
+            color: #aaa;
+            margin-top: 10px;
         }
-        /* MOBILE RESPONSIVE */
+
+        /* Adattamento per schermi piccoli (smartphone) */
         @media (max-width: 600px) {
-            h1 { font-size: 22px; }
-            .btn { width: 100%; }
-            p { font-size: 14px; }
+            .container {
+                margin: 20px auto;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 21px;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .descrizione {
+                font-size: 14px;
+            }
         }
+
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Guida al Calcolo del Fattore di Rischio</h1>
-    <p class="formula">Formula: R = P × D</p>
-    <p>
-        In questa pagina puoi scaricare la guida al calcolo del fattore di rischio.<br><br>
-        Il documento spiega come applicare la formula R = P × D, con la matrice di
-        rischio e alcuni esempi pratici per contesti lavorativi diversi.
-    </p>
-    <a href="documento.pdf" class="btn" download>Scarica il PDF</a>
-    <div class="qr">
-        <p>Oppure inquadra il QR code per aprire il documento da smartphone:</p>
-        <img src="qr.png" alt="QR Code">
-    </div>
-    <p class="footer">Project Work – Informatica L-31</p>
-</div>
+
+    <!-- Contenuto principale della pagina -->
+    <main class="container">
+
+        <!-- Intestazione con titolo e formula -->
+        <h1>Guida al Calcolo del Fattore di Rischio</h1>
+        <p class="formula">R = P × D</p>
+
+        <!-- Testo descrittivo -->
+        <p class="descrizione">
+            In questa pagina puoi scaricare la guida al calcolo del fattore di rischio.
+            Il documento spiega come applicare la formula R = P × D,
+            con la matrice di rischio e alcuni esempi pratici per contesti lavorativi diversi.
+        </p>
+
+        <!-- Linea separatrice -->
+        <hr>
+
+        <!-- Breve elenco dei contenuti del documento -->
+        <section class="info">
+            <h2>Cosa trovi nel documento:</h2>
+            <ul>
+                <li>Spiegazione della formula R = P × D</li>
+                <li>Scale di valutazione di probabilità e danno</li>
+                <li>Matrice di rischio con livelli di priorità</li>
+                <li>Esempi pratici per ufficio, negozio e cantiere</li>
+                <li>Riferimenti normativi (D.Lgs. 81/2008)</li>
+            </ul>
+        </section>
+
+        <!-- Sezione download con bottone -->
+        <section class="download-section">
+            <p>Clicca sul bottone per scaricare il documento:</p>
+            <a href="documento.pdf" class="btn" download>Scarica il PDF</a>
+        </section>
+
+        <!-- Sezione QR code per accesso da smartphone -->
+        <section class="qr-section">
+            <p>Oppure inquadra il QR code per aprire il documento da smartphone:</p>
+            <img src="qr.png" alt="QR code per scaricare il documento PDF">
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">Project Work – Informatica L-31</footer>
+
+    </main>
+
 </body>
 </html>
